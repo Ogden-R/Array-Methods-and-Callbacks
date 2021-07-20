@@ -28,15 +28,12 @@ hint - you should be looking at the stage key inside of the objects
 */
 
 
-///* const getFinals = fifaData.filter(function(item){
-//     return item.Stage === 'Final';
-// });or => */
+function getFinals(){
+  return fifaData.filter(item => item.Stage === 'Final');
+}
+console.log('Task 2:',getFinals());
 
 
-const getFinals = function(){
-     return fifaData.filter(item => item.Stage === 'Final');
-}  
-console.log("Task 2:", getFinals);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use the higher-order function called getYears to do the following: 
@@ -44,14 +41,10 @@ Use the higher-order function called getYears to do the following:
 2. Receive a callback function getFinals from task 2 
 3. Return an array called years containing all of the years in the getFinals data set*/
 
-
-//.map through finalscb to get all years (item.Year)
-// function getYears(array, getFinalsCB) {
-//     /* code here */
-// }
-const getYears = fifaData.map(function(array, getFinalsCB){
-    return 
-})
+function getYears(getFinalsCB){
+    return getFinalsCB.map(item => item.Year);
+}
+console.log("Task 3:", getYears(getFinals()));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
